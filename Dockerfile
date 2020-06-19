@@ -15,6 +15,7 @@ RUN export DEBIAN_FRONTEND noninteractive && \
 USER user
 ENV HOME /home/user
 WORKDIR /home/user
+RUN mkdir /home/user/Steam
 VOLUME /home/user/Steam
 
 RUN curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar xz && \
